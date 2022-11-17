@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root "groups#index"
+  resources :groups do
+    resources :entities, only: [:new, :create, :edit, :update]
+  end
   resources :entities
   resources :groups
   resources :users

@@ -2,6 +2,12 @@
 
 <h1>Groups</h1>
 
+<h2 class='title'>
+  Hello, 
+  <%= @user.name %>
+  <%= link_to "✐", edit_user_registration_path %>
+</h2>
+
 <div id="groups">
   <% @groups.each do |group| %>
     <%= render group %>

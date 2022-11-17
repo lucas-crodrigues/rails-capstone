@@ -2,6 +2,8 @@
 
 <%= render @group %>
 
+<%= link_to "New transaction", new_group_entity_path(@group, @entity), class: "btn-main" %>
+
 <div>
   <%= link_to "Edit this group", edit_group_path(@group) %> |
   <%= link_to "Back to groups", groups_path %>
