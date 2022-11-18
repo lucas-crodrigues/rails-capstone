@@ -1,0 +1,31 @@
+<div class="form-new">
+  <%= form_with(model: [@group, @entity]) do |form| %>
+    <% if entity.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+
+        <ul>
+          <% @entity.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.text_field :name, placeholder: 'Transaction' %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :amount, placeholder: 'Price' %>
+    </div>
+
+    <div id="group-list">
+      <%= form.collection_check_boxes(:group_ids, @user.groups.order( 'name ASC' ), :id, :name) %>
+    </div>
+
+    <div class="submit btn secondary">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,13 @@
+<header>
+<%= link_to '🡸', groups_path %>
+<h2><%=@group.name%></h2>
+<%= button_to "🗑", @group, method: :delete, class: "trash" %>
+</header>
+
+<div id="groups">
+  <%= render @group %>
+</div>
+
+<%= render @entities %>
+
+<%= link_to "New transaction", new_group_entity_path(@group, @entity), class: "btn secondary" %>
