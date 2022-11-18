@@ -1,8 +1,10 @@
-<p style="color: green"><%= notice %></p>
+<header>
+<%= link_to '🡸', root_path %>
+<h2>GROUPS</h2>
+<%= link_to 'Sign out' ,destroy_user_session_path, method: :delete, id: 'signout' %>
+</header>
 
-<h1>Groups</h1>
-
-<h2 class='title'>
+<h2 class='title header'>
   Hello, 
   <%= @user.name %>
   <%= link_to "✐", edit_user_registration_path %>
@@ -11,10 +13,8 @@
 <div id="groups">
   <% @groups.each do |group| %>
     <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
+    <hr>
   <% end %>
 </div>
 
-<%= link_to "New group", new_group_path %>
+<%= link_to "New Group", new_group_path, class: "btn secondary" %>
