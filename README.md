@@ -14,7 +14,7 @@
 
  ## Video Preview
 
- [N/A](#)
+ [Loom](https://www.loom.com/share/dad7dac94bd3448494eea11412e0c964)
 
  ## SQL schema
    ![](https://github.com/microverseinc/curriculum-rails/raw/main/capstone/images/erd_diagram.png)
