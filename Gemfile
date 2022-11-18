@@ -74,3 +74,7 @@ end
 gem 'dotenv-rails'
 
 gem 'devise'
+
+gem 'ffi'
+
+gem 'rspec-rails'
