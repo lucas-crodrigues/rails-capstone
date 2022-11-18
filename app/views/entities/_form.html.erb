@@ -1,10 +1,10 @@
-<%= form_with(model: entity) do |form| %>
+<%= form_with(model: [@group, @entity]) do |form| %>
   <% if entity.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+      <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
 
       <ul>
-        <% entity.errors.each do |error| %>
+        <% @entity.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

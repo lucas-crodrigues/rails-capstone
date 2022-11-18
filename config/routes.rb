@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   resources :groups do
     resources :entities, only: [:new, :create, :edit, :update]
   end
-  resources :entities
-  resources :groups
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

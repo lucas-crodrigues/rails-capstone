@@ -9,6 +9,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/1 or /groups/1.json
   def show
+    @entities = @group.entities.order(created_at: :desc)
   end
 
   # GET /groups/new
