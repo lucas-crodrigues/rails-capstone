@@ -10,26 +10,6 @@
   </head>
 
   <body>
-    <header>
-      <div>
-        Logo placeholder
-      </div>
-      <ul id="linkList">
-      <li><%= link_to 'My Recipes' , root_path %></li>
-      </ul>
-      <ul id="linkList">
-        <% if user_signed_in? %>
-        <h3><%= "Hello! #{current_user.name}" %></h3>
-        <li><%= link_to 'Sign out' ,destroy_user_session_path, method: :delete %></li>
-        <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
-        <% else %>
-        <li><%= link_to 'Sign in', new_user_session_path %></li>
-        <li><%= link_to 'Sign up', new_user_registration_path %></li>
-        <% end %>
-      </ul>
-    </header>
-    <div id="pageBody">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>
