@@ -85,4 +85,4 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['POSTGRES_PRO_DB'] %>
+  url: <%= ENV['DATABASE_URL'] %>
